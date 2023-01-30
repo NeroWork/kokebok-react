@@ -1,7 +1,12 @@
-import CancelIcon from '../../assets/Fondo.png';
-import TrashIcon from '../../assets/trashicon.png'
+import TableTitle from './cartTableTitle';
+import CartProduct from './cartProduct';
+import TableFooter from './cartTableFooter';
+import { CartContext } from '../../contextos/cartContext';
+import { useContext } from 'react';
 
-const CarritoPage = () => {
+const CarritoPage = ({contadorCart, SetContadorCart}) => {
+    const {cartList} = useContext(CartContext);
+
     return(
         <main className="main">
             <div className="main__div1__menu">
@@ -9,52 +14,22 @@ const CarritoPage = () => {
             </div>
             <div className="main__div2">
                 <div className="main__div2__divCarrito">
-                    <h2 className="carrito__h2">Carrito</h2>
+                    <h2 className="carrito__h2" onClick={() => console.log(cartList)}>Carrito</h2>
                     <div className="container-fluid g-0 container-carrito">
-                        <div className='row divCarrito__divProductos align-items-center g-0 justify-content-center'>
-                            <div className="producto__nombre align-items-center col-6 text-start">
-                                <p>Nombre del Producto</p>
-                            </div>
-                            <div className="col-2">
-                                <div className="producto__precio1 text-center">
-                                    <p className='mb-0'>Cantidad</p>
-                                </div>
-                            </div>
-                            <div className='col-2 text-center'>
-                                <div className='producto__precio'>
-                                    <p>Precio</p>
-                                </div>
-                            </div>
-                            <div className="producto__x col-2 text-center">
-                                <p className='mb-0'>Cancelar</p>
-                            </div>
-                        </div>
-                        <div className="row divCarrito__divProductos align-items-center g-0">
-                            <div className="producto__nombre align-items-center col-6 text-start">
-                                <p>Vacio</p>
-                            </div>
-                            <div className="col-2 text-center">
-                                <div className="producto__precio1">
-                                    <p className='mb-0'>0</p>
-                                </div>
-                            </div>
-                            <div className='col-2 text-center'>
-                                <div className='producto__precio'>
-                                    <p>$0</p>
-                                </div>
-                            </div>
-                            <div className="producto__x col-2 text-center">
-                                <img className='cartCancelImg' src={CancelIcon} alt="imagen de cancelar" />
-                            </div>
-                        </div>
-                        <div className="row carrito__divfinal g-0 align-items-center">
-                            <div className="col d-flex justify-content-start p-0">
-                                <img className='cartTrashImg ms-3' src={TrashIcon} alt="imagen de limpiar busqueda" />
-                            </div>
-                            <div className="col p-0">
-                                <p className="carrito__total mb-0">Total: $0</p>
-                            </div>
-                        </div>
+                        <TableTitle></TableTitle>
+                        {
+                            (cartList.length === 0)
+                            ?
+                            <CartProduct nombre="Vacío" cantidad="0" contadorCart={contadorCart} SetContadorCart={SetContadorCart} precioIndividual="0"></CartProduct>
+                            :
+                            cartList.map( producto => <CartProduct key={producto.id} id={producto.id} contadorCart={contadorCart} SetContadorCart={SetContadorCart} nombre={producto.nombre} cantidad={producto.cantidad} precioIndividual={producto.precio * producto.cantidad}></CartProduct>
+                            )
+                        }
+                        {
+                            (cartList.length === 0)
+                            ? <TableFooter vacio = {true}  SetContadorCart={SetContadorCart}></TableFooter>
+                            : <TableFooter vacio = {false}  SetContadorCart={SetContadorCart}></TableFooter>
+                        }
                     </div>
 
                 </div>

@@ -5,7 +5,6 @@ import { ProductosFetch } from "../../assets/moc";
 const Galeria = () => {
     const [productos, setProductos] = useState([]);
     const {idCategory} = useParams();
-    console.log(idCategory);
     
     useEffect(() => {
         if(idCategory === "oferta"){

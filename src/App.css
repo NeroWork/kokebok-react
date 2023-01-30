@@ -516,12 +516,45 @@ select option {
 .main__div1__detalle__item{
   background-color: #fff1e1;
   margin-top: 15vh !important;
-  height: 85vh;
+  height: max-content;
   display: flex;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
   text-align: none;
+}
+/* Works for Chrome, Safari, Edge, Opera */
+.inputItemDetail::-webkit-outer-spin-button,
+.inputItemDetail::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Works for Firefox */
+/* .inputItemDetail[type="number"] {
+  -moz-appearance: textfield;
+} */
+
+.inputItemDetail{
+  border: none !important;
+}
+
+.inputItemDetail:focus, .inputItemDetail:active{
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.botonAddItem{
+  color: #fff1e1 !important;
+  width: 2.5rem;
+  background-color: #4F2034 !important;
+  border-color: #fff1e1 !important;
+}
+
+.botonAddItem:hover{
+  background-color: #381725 !important;
 }
 
 .card__item__detail{
@@ -574,7 +607,7 @@ a:hover{
 }
 
 body {
-  background-color: #fff1e1;
+  background-color: #fff1e1 !important;
 }
 body html {
   height: 100%;
