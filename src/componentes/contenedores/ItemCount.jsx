@@ -8,12 +8,12 @@ import { Card } from "react-bootstrap";
 const ItemCont = ({stock, addOn}) => {
     const [cont, setCont] = useState(0);
 
-    const sumarContador = () =>{
+    const sumarContador = () => {
         if( (cont) < stock)
         setCont(cont + 1);
     }
 
-    const restarContador = () =>{
+    const restarContador = () => {
         if((cont) > 0){
             setCont(cont - 1);
         }

@@ -9,10 +9,35 @@
   color: #4F2034;
   font-size: max(2vw, 20px);
   border: none;
+  transition: scale .5s ease-in-out !important;
+}
+
+.nav-link-button2{
+  font-family: "Libre Baskerville", serif;
+  background-color: #fff1e1;
+  color: #4F2034 !important;
+  font-size: max(2vw, 20px);
+  border: none;
+  transition: scale .5s ease-in-out !important;
+}
+
+.nav-link-button2:hover{
+  text-decoration: underline #4F2034 solid !important;
+}
+
+.h2-cargando{
+  font-family: "Libre Baskerville", serif;
+  color: #4F2034;
+  font-size: max(3vw, 20px);
+}
+
+.w-min{
+  width: fit-content;
 }
 
 .nav-link-button:hover{
-  color: #4F2034;
+  color: #4F2034 !important;
+  scale: 1.2 !important;
 }
 
 .main__div1__h1 {
@@ -56,6 +81,10 @@
   color: #4F2034;
   -webkit-text-decoration: underline wavy;
           text-decoration: underline wavy;
+}
+
+.h4Link{
+  color: #fff1e1;
 }
 
 .noflexgrow {
@@ -346,6 +375,7 @@ select option {
 }
 
 .main__div1__galeria__card {
+  color: #4F2034 !important;
   min-width: 250px !important;
   width: 100% !important;
   max-width: 300px !important;
@@ -353,6 +383,7 @@ select option {
 }
 .main__div1__galeria__card:hover {
   transform: scale(1.07);
+  color: #4F2034 !important;
   box-shadow: 1px 1px 20px, -1px -1px 20px;
 }
 
@@ -462,6 +493,30 @@ select option {
   margin-bottom: 0 !important;
 }
 
+.formcontrols{
+  border-color: #4F2034 !important;
+  color: #4F2034 !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #4F2034;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.formcontrols:focus{
+  border-color: #4F2034 !important;
+  box-shadow: 0 0 0 0.25rem #4f203466 !important;
+}
+
 .producto__precio{
   border-left: #4F2034 2px solid;
   border-right: #4F2034 2px solid;
@@ -516,6 +571,7 @@ select option {
 .main__div1__detalle__item{
   background-color: #fff1e1;
   margin-top: 15vh !important;
+  min-height: 85vh;
   height: max-content;
   display: flex;
   padding-top: 3rem;
@@ -573,6 +629,16 @@ select option {
   color: #fff1e1 !important;
 }
 
+.botonSeguirComprando{
+  background-color: #4F2034 !important;
+  border-color: #4F2034 !important;
+  font-family: "Libre Baskerville", serif !important;
+}
+
+.botonSeguirComprando:hover{
+  border-color: #381725 !important;
+}
+
 .circulo{
   height: 1.5rem;
   width: 1.5rem;
@@ -589,14 +655,14 @@ select option {
   margin: 0px;
   padding: 0px;
 }
-*::-moz-selection {
-  color: #fff1e1;
+/* *::-moz-selection {
+  color: #fff1e1 !important;
   background-color: #4F2034;
 }
 *::selection {
-  color: #fff1e1;
+  color: #fff1e1 !important;
   background-color: #4F2034;
-}
+} */
 
 p {
   margin-bottom: 0%;

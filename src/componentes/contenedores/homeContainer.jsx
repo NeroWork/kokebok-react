@@ -1,4 +1,4 @@
-const ContenedorHome = ({greeting}) => {
+const ContenedorHome = () => {
     return (
         <main className="container-fluid text-center">
             <div className="main__div1 row">

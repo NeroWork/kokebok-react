@@ -22,7 +22,6 @@ function App() {
           <Route path='/item/:idItem' element={<ItemDetailContainer contadorCart={contadorCart} SetContadorCart={SetContadorCart}></ItemDetailContainer>}></Route>
           <Route path='/category/:idCategory' element={<Galeria></Galeria>}></Route>
           <Route path='/cart' element={<CarritoPage contadorCart={contadorCart} SetContadorCart={SetContadorCart}></CarritoPage>}></Route>
-
           <Route path='*' element={<Navigate to="/"></Navigate>}></Route>
         </Routes>
         <Footer></Footer>
