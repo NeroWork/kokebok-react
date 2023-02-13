@@ -1,8 +1,12 @@
 # Author
 **Furlan Facundo:**
+
 LinkedIn: https://www.linkedin.com/in/facundo-furlan/
+
 GitHub: https://github.com/NeroWork
+
 WebPage: [Portfolio](https://nerowork.github.io/PortafolioApp/)
+
 
 
 # Welcome to Kokebok!
@@ -16,13 +20,21 @@ For the project I mainly used React Js, together with several libraries such as 
 
 # Dependencies
 uiball/loaders: ^1.2.6
+
 bootstrap: ^5.2.3
+
 firebase: ^9.17.1
+
 react: ^18.2.0
+
 react-bootstrap: ^2.7.0
+
 react-dom: ^18.2.0
+
 react-router-dom: ^6.7.0
+
 sweetalert2: ^11.7.1
+
 sweetalert2-react-content: ^5.0.7
 
 
